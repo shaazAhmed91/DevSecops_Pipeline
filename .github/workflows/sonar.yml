@@ -10,4 +10,4 @@ jobs:
     #needs: build  # Ensures Sonar runs after build succeeds
     steps:
       - name: SonarCloud Scan
-        run: mvn sonar:sonar 
+        run: mvn sonar:sonar -Dsonar.projectKey=shaazAhmed91_DevSecops_Pipeline -Dsonar.organization=shaazAhmed91 -Dsonar.host.url=https://sonarcloud.io
