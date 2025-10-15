@@ -10,6 +10,4 @@ jobs:
     #needs: build  # Ensures Sonar runs after build succeeds
     steps:
       - name: SonarCloud Scan
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=shaazAhmed91_DevSecops_Pipeline
+        run: mvn sonar:sonar -Dsonar.projectKey=shaazAhmed91_DevSecops_Pipeline -Dsonar.organization=shaazAhmed91 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=a5801584d7990063dc61db9ad60f4b7f3f62925clogin=
